@@ -5,9 +5,11 @@
 //  Created by Lucas Reinaldo on 10/08/19.
 //  Copyright © 2019 Vostore. All rights reserved.
 //
-
+import FacebookCore
+import FacebookLogin
+import FacebookShare
 import UIKit
-
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = ViewController()
+//        window?.makeKeyAndVisible()
+//        // Override point for customization after application launch.
+////        Thread.sleep(forTimeInterval: 15.0)
+//
+////        window = UIWindow(frame: UIScreen.main.bounds)
+////        window?.rootViewController = ViewController()
+////        window?.makeKeyAndVisible()
+//         RunLoop.current.run(until: NSDate(timeIntervalSinceNow:1) as Date)
+        
+        
         return true
     }
 
@@ -41,6 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+   
 }
 

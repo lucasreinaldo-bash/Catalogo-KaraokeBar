@@ -3,18 +3,89 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		834A3A1A2324B7CB008049DD /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A3A192324B7CB008049DD /* QRCodeViewController.swift */; };
+		834A3A1C232560AD008049DD /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A3A1B232560AD008049DD /* RegistroViewController.swift */; };
+		83506D082310E60100A425F6 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83506D072310E60100A425F6 /* LoginButton.swift */; };
+		83506D0A2310E61A00A425F6 /* FacebookLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83506D092310E61A00A425F6 /* FacebookLoginButton.swift */; };
+		83506D0C2310E64200A425F6 /* TwitterLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83506D0B2310E64200A425F6 /* TwitterLoginButton.swift */; };
+		83506D0E2310E65700A425F6 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83506D0D2310E65700A425F6 /* LoginTextField.swift */; };
+		83506D102311B3BF00A425F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83506D0F2311B3BF00A425F6 /* LoginViewController.swift */; };
+		83506D132311F81300A425F6 /* FacebookAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83506D122311F81300A425F6 /* FacebookAPIManager.swift */; };
+		8358A7E42300B28A00D90D40 /* ListagemNacionalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8358A7E32300B28A00D90D40 /* ListagemNacionalTableViewCell.xib */; };
+		8358A7E62300B5A800D90D40 /* ListagemNacionalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A7E52300B5A800D90D40 /* ListagemNacionalTableViewCell.swift */; };
+		8358A7E92300B76600D90D40 /* ListagemNacionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A7E72300B76600D90D40 /* ListagemNacionalViewController.swift */; };
+		8358A7EA2300B76600D90D40 /* ListagemNacionalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8358A7E82300B76600D90D40 /* ListagemNacionalViewController.xib */; };
+		8358A7ED2300CC4400D90D40 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A7EC2300CC4400D90D40 /* File.swift */; };
+		8358A7EF2300F2C400D90D40 /* Splash2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A7EE2300F2C400D90D40 /* Splash2ViewController.swift */; };
+		8358A7F72302641500D90D40 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A7F62302641500D90D40 /* MyCustomCell.swift */; };
+		8358A7FD230265E700D90D40 /* CodMusicCantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358A7FC230265E700D90D40 /* CodMusicCantor.swift */; };
+		83AB0374230916580006A21B /* nunito_semi_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83AB03732309133D0006A21B /* nunito_semi_bold.ttf */; };
+		83AB0375230916640006A21B /* quicksand_bold_oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83AB03702309133C0006A21B /* quicksand_bold_oblique.otf */; };
+		83AB03762309166A0006A21B /* quicksand_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83AB036F2309133C0006A21B /* quicksand_bold.otf */; };
+		83AB03772309166E0006A21B /* quicksand_book_oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83AB03712309133C0006A21B /* quicksand_book_oblique.otf */; };
+		83AB0378230916730006A21B /* quicksand_book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83AB036E2309133C0006A21B /* quicksand_book.otf */; };
+		83AB0379230916780006A21B /* quicksand_light_oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83AB036D2309133C0006A21B /* quicksand_light_oblique.otf */; };
+		83AB037A2309167C0006A21B /* quicksand_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83AB036C2309133C0006A21B /* quicksand_light.otf */; };
+		83AB037B230916810006A21B /* quicksand_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83AB03722309133D0006A21B /* quicksand_regular.ttf */; };
+		83AB037E23091ACB0006A21B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB037D23091ACB0006A21B /* SecondViewController.swift */; };
+		83AB03802309950E0006A21B /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB037F2309950E0006A21B /* MainTableViewCell.swift */; };
+		83AB038223099FA50006A21B /* ThirtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB038123099FA50006A21B /* ThirtyViewController.swift */; };
 		83F1010F22FF2D1000695A2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F1010E22FF2D1000695A2A /* AppDelegate.swift */; };
 		83F1011122FF2D1000695A2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F1011022FF2D1000695A2A /* ViewController.swift */; };
 		83F1011422FF2D1000695A2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F1011222FF2D1000695A2A /* Main.storyboard */; };
 		83F1011622FF2D1700695A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F1011522FF2D1700695A2A /* Assets.xcassets */; };
 		83F1011922FF2D1700695A2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F1011722FF2D1700695A2A /* LaunchScreen.storyboard */; };
+		83F77896230A31FD00208D55 /* RedesSociaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F77895230A31FD00208D55 /* RedesSociaisViewController.swift */; };
+		83F77898230A3D1900208D55 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F77897230A3D1900208D55 /* MapsViewController.swift */; };
+		83F7789A230A5F0200208D55 /* ContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F77899230A5F0200208D55 /* ContatoViewController.swift */; };
+		83F7789C230BA54500208D55 /* SalvarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F7789B230BA54500208D55 /* SalvarContatoViewController.swift */; };
+		83FBB7E62303A78A00D7D2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83FBB7E52303A78900D7D2CF /* GoogleService-Info.plist */; };
+		83FBB7EA2305016800D7D2CF /* PalestrantesNacionaisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBB7E82305016800D7D2CF /* PalestrantesNacionaisTableViewCell.swift */; };
+		83FBB7EB2305016800D7D2CF /* PalestrantesNacionaisTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FBB7E92305016800D7D2CF /* PalestrantesNacionaisTableViewCell.xib */; };
+		83FBB7ED2305021C00D7D2CF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBB7EC2305021C00D7D2CF /* Post.swift */; };
+		83FBB7EF230502F000D7D2CF /* PalestrantesNacionaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBB7EE230502F000D7D2CF /* PalestrantesNacionaisViewController.swift */; };
+		83FBB7F12305CB9600D7D2CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBB7F02305CB9600D7D2CF /* TableViewCell.swift */; };
+		83FBB7F323088DCE00D7D2CF /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBB7F223088DCD00D7D2CF /* WebViewViewController.swift */; };
+		83FBB7F52308D99300D7D2CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBB7F42308D99300D7D2CF /* MainViewController.swift */; };
+		CD9DFB430075B4AD198C50E2 /* Pods_Karaoke_Bar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC5BB0DAFFF7C95EF651571 /* Pods_Karaoke_Bar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CC5BB0DAFFF7C95EF651571 /* Pods_Karaoke_Bar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Karaoke_Bar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D51D775DCE9F41632864D56 /* Pods-Karaoke Bar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karaoke Bar.debug.xcconfig"; path = "Target Support Files/Pods-Karaoke Bar/Pods-Karaoke Bar.debug.xcconfig"; sourceTree = "<group>"; };
+		834A3A192324B7CB008049DD /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		834A3A1B232560AD008049DD /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		83506D072310E60100A425F6 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		83506D092310E61A00A425F6 /* FacebookLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginButton.swift; sourceTree = "<group>"; };
+		83506D0B2310E64200A425F6 /* TwitterLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLoginButton.swift; sourceTree = "<group>"; };
+		83506D0D2310E65700A425F6 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		83506D0F2311B3BF00A425F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		83506D122311F81300A425F6 /* FacebookAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIManager.swift; sourceTree = "<group>"; };
+		8358A7E32300B28A00D90D40 /* ListagemNacionalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListagemNacionalTableViewCell.xib; path = "../../../CongressoFozABNc2019/Congresso Foz ABNc 2019/ListagemNacionalTableViewCell.xib"; sourceTree = "<group>"; };
+		8358A7E52300B5A800D90D40 /* ListagemNacionalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListagemNacionalTableViewCell.swift; sourceTree = "<group>"; };
+		8358A7E72300B76600D90D40 /* ListagemNacionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListagemNacionalViewController.swift; sourceTree = "<group>"; };
+		8358A7E82300B76600D90D40 /* ListagemNacionalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListagemNacionalViewController.xib; sourceTree = "<group>"; };
+		8358A7EC2300CC4400D90D40 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		8358A7EE2300F2C400D90D40 /* Splash2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash2ViewController.swift; sourceTree = "<group>"; };
+		8358A7F023025B2400D90D40 /* CodMusicCantor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodMusicCantor.xib; sourceTree = "<group>"; };
+		8358A7F5230260CA00D90D40 /* ListagemNacionalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListagemNacionalTableViewCell.xib; sourceTree = "<group>"; };
+		8358A7F62302641500D90D40 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
+		8358A7FC230265E700D90D40 /* CodMusicCantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodMusicCantor.swift; sourceTree = "<group>"; };
+		83AB036C2309133C0006A21B /* quicksand_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = quicksand_light.otf; path = ../../../../../../../../projetosgit/KaraokeBar/app/src/main/res/font/quicksand_light.otf; sourceTree = "<group>"; };
+		83AB036D2309133C0006A21B /* quicksand_light_oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = quicksand_light_oblique.otf; path = ../../../../../../../../projetosgit/KaraokeBar/app/src/main/res/font/quicksand_light_oblique.otf; sourceTree = "<group>"; };
+		83AB036E2309133C0006A21B /* quicksand_book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = quicksand_book.otf; path = ../../../../../../../../projetosgit/KaraokeBar/app/src/main/res/font/quicksand_book.otf; sourceTree = "<group>"; };
+		83AB036F2309133C0006A21B /* quicksand_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = quicksand_bold.otf; path = ../../../../../../../../projetosgit/KaraokeBar/app/src/main/res/font/quicksand_bold.otf; sourceTree = "<group>"; };
+		83AB03702309133C0006A21B /* quicksand_bold_oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = quicksand_bold_oblique.otf; path = ../../../../../../../../projetosgit/KaraokeBar/app/src/main/res/font/quicksand_bold_oblique.otf; sourceTree = "<group>"; };
+		83AB03712309133C0006A21B /* quicksand_book_oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = quicksand_book_oblique.otf; path = ../../../../../../../../projetosgit/KaraokeBar/app/src/main/res/font/quicksand_book_oblique.otf; sourceTree = "<group>"; };
+		83AB03722309133D0006A21B /* quicksand_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = quicksand_regular.ttf; path = ../../../../../../../../projetosgit/KaraokeBar/app/src/main/res/font/quicksand_regular.ttf; sourceTree = "<group>"; };
+		83AB03732309133D0006A21B /* nunito_semi_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = nunito_semi_bold.ttf; path = ../../../../../../projetosgit/KaraokeBar/app/src/main/res/font/nunito_semi_bold.ttf; sourceTree = SOURCE_ROOT; };
+		83AB037D23091ACB0006A21B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		83AB037F2309950E0006A21B /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		83AB038123099FA50006A21B /* ThirtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirtyViewController.swift; sourceTree = "<group>"; };
 		83F1010B22FF2D1000695A2A /* Karaoke Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Karaoke Bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F1010E22FF2D1000695A2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83F1011022FF2D1000695A2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +93,19 @@
 		83F1011522FF2D1700695A2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83F1011822FF2D1700695A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83F1011A22FF2D1700695A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F77895230A31FD00208D55 /* RedesSociaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RedesSociaisViewController.swift; path = ../RedesSociaisViewController.swift; sourceTree = "<group>"; };
+		83F77897230A3D1900208D55 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		83F77899230A5F0200208D55 /* ContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContatoViewController.swift; path = ../ContatoViewController.swift; sourceTree = "<group>"; };
+		83F7789B230BA54500208D55 /* SalvarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalvarContatoViewController.swift; sourceTree = "<group>"; };
+		83FBB7E52303A78900D7D2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83FBB7E82305016800D7D2CF /* PalestrantesNacionaisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalestrantesNacionaisTableViewCell.swift; sourceTree = "<group>"; };
+		83FBB7E92305016800D7D2CF /* PalestrantesNacionaisTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PalestrantesNacionaisTableViewCell.xib; sourceTree = "<group>"; };
+		83FBB7EC2305021C00D7D2CF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		83FBB7EE230502F000D7D2CF /* PalestrantesNacionaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalestrantesNacionaisViewController.swift; sourceTree = "<group>"; };
+		83FBB7F02305CB9600D7D2CF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		83FBB7F223088DCD00D7D2CF /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		83FBB7F42308D99300D7D2CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CC43305E3948F4FE8B808CB6 /* Pods-Karaoke Bar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karaoke Bar.release.xcconfig"; path = "Target Support Files/Pods-Karaoke Bar/Pods-Karaoke Bar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +113,95 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9DFB430075B4AD198C50E2 /* Pods_Karaoke_Bar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C8D3076E181E810E473DB07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D51D775DCE9F41632864D56 /* Pods-Karaoke Bar.debug.xcconfig */,
+				CC43305E3948F4FE8B808CB6 /* Pods-Karaoke Bar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7251C929478089517C675016 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CC5BB0DAFFF7C95EF651571 /* Pods_Karaoke_Bar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83506D062310E39A00A425F6 /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+				83506D072310E60100A425F6 /* LoginButton.swift */,
+				83506D092310E61A00A425F6 /* FacebookLoginButton.swift */,
+				83506D0B2310E64200A425F6 /* TwitterLoginButton.swift */,
+				83506D0D2310E65700A425F6 /* LoginTextField.swift */,
+			);
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		83506D112311F7C900A425F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83506D122311F81300A425F6 /* FacebookAPIManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8358A7E22300B26700D90D40 /* LayoutCard */ = {
+			isa = PBXGroup;
+			children = (
+				8358A7E32300B28A00D90D40 /* ListagemNacionalTableViewCell.xib */,
+			);
+			path = LayoutCard;
+			sourceTree = "<group>";
+		};
+		8358A7EB2300CC3200D90D40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8358A7EC2300CC4400D90D40 /* File.swift */,
+				83FBB7EC2305021C00D7D2CF /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83AB036B2309132B0006A21B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				83AB03732309133D0006A21B /* nunito_semi_bold.ttf */,
+				83AB03702309133C0006A21B /* quicksand_bold_oblique.otf */,
+				83AB036F2309133C0006A21B /* quicksand_bold.otf */,
+				83AB03712309133C0006A21B /* quicksand_book_oblique.otf */,
+				83AB036E2309133C0006A21B /* quicksand_book.otf */,
+				83AB036D2309133C0006A21B /* quicksand_light_oblique.otf */,
+				83AB036C2309133C0006A21B /* quicksand_light.otf */,
+				83AB03722309133D0006A21B /* quicksand_regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		83AB037C23091A9C0006A21B /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		83F1010222FF2D1000695A2A = {
 			isa = PBXGroup;
 			children = (
 				83F1010D22FF2D1000695A2A /* Karaoke Bar */,
 				83F1010C22FF2D1000695A2A /* Products */,
+				4C8D3076E181E810E473DB07 /* Pods */,
+				7251C929478089517C675016 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +216,43 @@
 		83F1010D22FF2D1000695A2A /* Karaoke Bar */ = {
 			isa = PBXGroup;
 			children = (
+				83506D112311F7C900A425F6 /* Models */,
+				83506D0F2311B3BF00A425F6 /* LoginViewController.swift */,
+				83506D062310E39A00A425F6 /* New Group2 */,
+				83F7789B230BA54500208D55 /* SalvarContatoViewController.swift */,
+				83F77899230A5F0200208D55 /* ContatoViewController.swift */,
+				83F77895230A31FD00208D55 /* RedesSociaisViewController.swift */,
+				83AB037C23091A9C0006A21B /* New Group1 */,
+				83AB036B2309132B0006A21B /* Fonts */,
+				83FBB7E52303A78900D7D2CF /* GoogleService-Info.plist */,
+				8358A7F023025B2400D90D40 /* CodMusicCantor.xib */,
+				8358A7EB2300CC3200D90D40 /* Models */,
+				8358A7E22300B26700D90D40 /* LayoutCard */,
 				83F1010E22FF2D1000695A2A /* AppDelegate.swift */,
 				83F1011022FF2D1000695A2A /* ViewController.swift */,
+				834A3A192324B7CB008049DD /* QRCodeViewController.swift */,
 				83F1011222FF2D1000695A2A /* Main.storyboard */,
 				83F1011522FF2D1700695A2A /* Assets.xcassets */,
 				83F1011722FF2D1700695A2A /* LaunchScreen.storyboard */,
 				83F1011A22FF2D1700695A2A /* Info.plist */,
+				8358A7E52300B5A800D90D40 /* ListagemNacionalTableViewCell.swift */,
+				8358A7F5230260CA00D90D40 /* ListagemNacionalTableViewCell.xib */,
+				8358A7E72300B76600D90D40 /* ListagemNacionalViewController.swift */,
+				8358A7E82300B76600D90D40 /* ListagemNacionalViewController.xib */,
+				8358A7EE2300F2C400D90D40 /* Splash2ViewController.swift */,
+				8358A7F62302641500D90D40 /* MyCustomCell.swift */,
+				8358A7FC230265E700D90D40 /* CodMusicCantor.swift */,
+				83FBB7E82305016800D7D2CF /* PalestrantesNacionaisTableViewCell.swift */,
+				83FBB7E92305016800D7D2CF /* PalestrantesNacionaisTableViewCell.xib */,
+				83FBB7EE230502F000D7D2CF /* PalestrantesNacionaisViewController.swift */,
+				83FBB7F02305CB9600D7D2CF /* TableViewCell.swift */,
+				83FBB7F223088DCD00D7D2CF /* WebViewViewController.swift */,
+				83FBB7F42308D99300D7D2CF /* MainViewController.swift */,
+				83AB037D23091ACB0006A21B /* SecondViewController.swift */,
+				83AB037F2309950E0006A21B /* MainTableViewCell.swift */,
+				83AB038123099FA50006A21B /* ThirtyViewController.swift */,
+				83F77897230A3D1900208D55 /* MapsViewController.swift */,
+				834A3A1B232560AD008049DD /* RegistroViewController.swift */,
 			);
 			path = "Karaoke Bar";
 			sourceTree = "<group>";
@@ -71,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83F1011D22FF2D1700695A2A /* Build configuration list for PBXNativeTarget "Karaoke Bar" */;
 			buildPhases = (
+				B32D37AFDE90DC1833DEB84C /* [CP] Check Pods Manifest.lock */,
 				83F1010722FF2D1000695A2A /* Sources */,
 				83F1010822FF2D1000695A2A /* Frameworks */,
 				83F1010922FF2D1000695A2A /* Resources */,
+				F9547C109FFFC1617EC6A429 /* [CP] Embed Pods Frameworks */,
+				DABC7376B5B205FEEEDEDC87 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,20 +319,118 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F1011922FF2D1700695A2A /* LaunchScreen.storyboard in Resources */,
+				83AB03772309166E0006A21B /* quicksand_book_oblique.otf in Resources */,
+				83AB0378230916730006A21B /* quicksand_book.otf in Resources */,
+				8358A7EA2300B76600D90D40 /* ListagemNacionalViewController.xib in Resources */,
+				83AB0374230916580006A21B /* nunito_semi_bold.ttf in Resources */,
+				8358A7E42300B28A00D90D40 /* ListagemNacionalTableViewCell.xib in Resources */,
+				83AB037A2309167C0006A21B /* quicksand_light.otf in Resources */,
 				83F1011622FF2D1700695A2A /* Assets.xcassets in Resources */,
+				83FBB7EB2305016800D7D2CF /* PalestrantesNacionaisTableViewCell.xib in Resources */,
+				83AB03762309166A0006A21B /* quicksand_bold.otf in Resources */,
 				83F1011422FF2D1000695A2A /* Main.storyboard in Resources */,
+				83AB0379230916780006A21B /* quicksand_light_oblique.otf in Resources */,
+				83FBB7E62303A78A00D7D2CF /* GoogleService-Info.plist in Resources */,
+				83AB037B230916810006A21B /* quicksand_regular.ttf in Resources */,
+				83AB0375230916640006A21B /* quicksand_bold_oblique.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B32D37AFDE90DC1833DEB84C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Karaoke Bar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DABC7376B5B205FEEEDEDC87 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Karaoke Bar/Pods-Karaoke Bar-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Karaoke Bar/Pods-Karaoke Bar-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Karaoke Bar/Pods-Karaoke Bar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9547C109FFFC1617EC6A429 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Karaoke Bar/Pods-Karaoke Bar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Karaoke Bar/Pods-Karaoke Bar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Karaoke Bar/Pods-Karaoke Bar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83F1010722FF2D1000695A2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8358A7ED2300CC4400D90D40 /* File.swift in Sources */,
+				8358A7E62300B5A800D90D40 /* ListagemNacionalTableViewCell.swift in Sources */,
+				8358A7E92300B76600D90D40 /* ListagemNacionalViewController.swift in Sources */,
+				83AB037E23091ACB0006A21B /* SecondViewController.swift in Sources */,
+				8358A7F72302641500D90D40 /* MyCustomCell.swift in Sources */,
+				83F7789A230A5F0200208D55 /* ContatoViewController.swift in Sources */,
 				83F1011122FF2D1000695A2A /* ViewController.swift in Sources */,
+				83506D0A2310E61A00A425F6 /* FacebookLoginButton.swift in Sources */,
+				83F7789C230BA54500208D55 /* SalvarContatoViewController.swift in Sources */,
+				83F77896230A31FD00208D55 /* RedesSociaisViewController.swift in Sources */,
+				83FBB7EF230502F000D7D2CF /* PalestrantesNacionaisViewController.swift in Sources */,
+				83506D132311F81300A425F6 /* FacebookAPIManager.swift in Sources */,
+				83506D0C2310E64200A425F6 /* TwitterLoginButton.swift in Sources */,
+				83FBB7EA2305016800D7D2CF /* PalestrantesNacionaisTableViewCell.swift in Sources */,
+				83506D082310E60100A425F6 /* LoginButton.swift in Sources */,
+				83AB038223099FA50006A21B /* ThirtyViewController.swift in Sources */,
+				83FBB7F52308D99300D7D2CF /* MainViewController.swift in Sources */,
+				8358A7FD230265E700D90D40 /* CodMusicCantor.swift in Sources */,
+				83AB03802309950E0006A21B /* MainTableViewCell.swift in Sources */,
+				83F77898230A3D1900208D55 /* MapsViewController.swift in Sources */,
+				83506D0E2310E65700A425F6 /* LoginTextField.swift in Sources */,
+				83FBB7F323088DCE00D7D2CF /* WebViewViewController.swift in Sources */,
+				8358A7EF2300F2C400D90D40 /* Splash2ViewController.swift in Sources */,
+				83FBB7F12305CB9600D7D2CF /* TableViewCell.swift in Sources */,
 				83F1010F22FF2D1000695A2A /* AppDelegate.swift in Sources */,
+				83506D102311B3BF00A425F6 /* LoginViewController.swift in Sources */,
+				834A3A1A2324B7CB008049DD /* QRCodeViewController.swift in Sources */,
+				834A3A1C232560AD008049DD /* RegistroViewController.swift in Sources */,
+				83FBB7ED2305021C00D7D2CF /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,35 +574,45 @@
 		};
 		83F1011E22FF2D1700695A2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D51D775DCE9F41632864D56 /* Pods-Karaoke Bar.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = IconeBranco;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A892F3XBA6;
 				INFOPLIST_FILE = "Karaoke Bar/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "vostore.Karaoke-Bar";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vostore.karaokebar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		83F1011F22FF2D1700695A2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC43305E3948F4FE8B808CB6 /* Pods-Karaoke Bar.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = IconeBranco;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A892F3XBA6;
 				INFOPLIST_FILE = "Karaoke Bar/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "vostore.Karaoke-Bar";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vostore.karaokebar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
