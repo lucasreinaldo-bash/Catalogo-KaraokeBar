@@ -13,7 +13,7 @@ import Firebase
 import Toast_Swift
 import FirebaseAuth
 
-class RegistroViewController: UIViewController {
+class RegistroViewController: UIViewController,UITextFieldDelegate {
     
     //Instanciando os campos de entrada de texto
     @IBOutlet weak var senhaTextField: UITextField!
@@ -45,9 +45,21 @@ class RegistroViewController: UIViewController {
     
     //    Metodo para demitir o teclado
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+        
+        senhaTextField.resignFirstResponder()
+        sobrenomeTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        nomeTextField.resignFirstResponder()
+
+        
+
+        
+        
     }
- 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     func handleTextField(){
         nomeTextField.addTarget(self, action: #selector(RegistroViewController.textFieldDidChange), for: UIControl.Event.editingChanged)
         emailTextField.addTarget(self, action: #selector(RegistroViewController.textFieldDidChange), for: UIControl.Event.editingChanged)

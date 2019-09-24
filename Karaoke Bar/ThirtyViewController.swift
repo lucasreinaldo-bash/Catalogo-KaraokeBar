@@ -10,10 +10,19 @@ import UIKit
 import FirebaseDatabase
 import ContactsUI
 
-class ThirtyViewController:  UIViewController, UITableViewDataSource, UITableViewDelegate,CNContactViewControllerDelegate {
+class ThirtyViewController:  UIViewController,UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate,CNContactViewControllerDelegate {
+    
+    
+    //Para adicionar na variavel
+    @IBOutlet weak var switchOpcao: UISwitch!
+    @IBOutlet weak var labelCantor: UILabel!
+    @IBOutlet weak var labelMusica: UILabel!
+    
     
     
     //Botoes e label da tela inicial
+
+    
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var btn1: UIButton!
@@ -26,14 +35,20 @@ class ThirtyViewController:  UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var btnVoltar: UIButton!
     @IBOutlet weak var container: UIView!
+//    var filhoQuery: String
     var table = [Post] ()
     var ref: DatabaseReference!
     var query: DatabaseQuery!
     var linkMusica:String = ""
+    var filhoQuery:String = ""
+
     @IBOutlet weak var Tableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         
         Tableview.rowHeight = UITableView.automaticDimension
         Tableview.estimatedRowHeight = 76
@@ -186,7 +201,23 @@ class ThirtyViewController:  UIViewController, UITableViewDataSource, UITableVie
         btn3.isHidden = true
         btn4.isHidden = true
         btn5.isHidden = true
+        switchOpcao.isHidden = false
         Tableview.isHidden = false
+        labelCantor.isHidden = false
+        labelMusica.isHidden = false
+
+
+        
+        
+        if (switchOpcao.isOn){
+            labelCantor.isHidden = false
+            labelMusica.isHidden = true
+            
+        }
+        else{
+            labelCantor.isHidden = true
+            labelMusica.isHidden = false
+        }
     }
     func tableInvisible (){
         
@@ -197,25 +228,63 @@ class ThirtyViewController:  UIViewController, UITableViewDataSource, UITableVie
         btn3.isHidden = false
         btn4.isHidden = false
         btn5.isHidden = false
+        switchOpcao.isHidden = true
         Tableview.isHidden = true
+        labelMusica.isHidden = true
+        labelCantor.isHidden = true
+
+
         
-        
+      
         
        
     }
- 
+    
+    
+    @IBAction func cliqueSwitch(_ sender: Any) {
+        if (switchOpcao.isOn){
+            labelCantor.isHidden = false
+            labelMusica.isHidden = true
+            
+        }
+        else{
+            labelCantor.isHidden = true
+            labelMusica.isHidden = false
+        }
+        
+    }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         tableVisible()
+        if (switchOpcao.isOn){
+            labelCantor.isHidden = false
+            labelMusica.isHidden = true
+            filhoQuery = "cantor"
+            
+            
+     
+            var cantor : String = buscarCantor.text!
+            
+            
+         
+            
+        }
+        else{
+            labelCantor.isHidden = true
+            labelMusica.isHidden = false
+            filhoQuery = "nomeMusica"
+            
+            
+            
+         
+        }
         
-        var caracteres = buscarCantor.text?.count
+        
         var cantor : String = buscarCantor.text!
-        
-        
+        var caracteres = buscarCantor.text?.count
+
         ref = Database.database().reference().child("AllMusic")
-        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: cantor)
-        
-        
-        //Container para compor o TableView
+        query = ref.queryOrdered(byChild: filhoQuery).queryStarting(atValue: cantor)
         
         query.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount > 0 {
@@ -235,8 +304,16 @@ class ThirtyViewController:  UIViewController, UITableViewDataSource, UITableVie
                     self.Tableview.reloadData()
                     
                 }
+                
             }
         })
+    
+        
+        
+        
+        //Container para compor o TableView
+        
+  
         if(caracteres == 1 ){
            tableInvisible ()
         }
@@ -262,5 +339,18 @@ class ThirtyViewController:  UIViewController, UITableViewDataSource, UITableVie
         contactVC.allowsActions = false
         let navigationController = UINavigationController(rootViewController: contactVC) //For presenting the vc you have to make it navigation controller otherwise it will not work, if you already have navigatiation controllerjust push it you dont have to make it a navigation controller
         self.present(navigationController, animated: true, completion: nil)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        buscarCantor.resignFirstResponder()
+       
+        
+        
+        
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

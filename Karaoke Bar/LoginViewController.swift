@@ -14,7 +14,7 @@ import TwitterKit
 import FirebaseAuth
 import UIKit
 import Toast_Swift
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var senhaField: UITextField!
@@ -24,6 +24,10 @@ class LoginViewController: UIViewController {
 
         verificarUsuarioLogado()
         // Do any additional setup after loading the view.
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func btnLogin(_ sender: Any){
@@ -35,7 +39,9 @@ class LoginViewController: UIViewController {
                 }
                 print("Usuário logado")
                 
-              
+                self.view.endEditing(true)
+                
+        
                 //Conduzindo o usuario com o cadastro confirmado, para a tela seguinte
                 var style = ToastStyle()
                 style.messageColor = .white
@@ -74,5 +80,27 @@ class LoginViewController: UIViewController {
         }
     }
 
+    // 13
+    
+  
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        emailField.resignFirstResponder()
+        senhaField.resignFirstResponder()
+
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//
+//        self.view.endEditing(true)
+//
+//        return true
+//
+//    }
  
 }

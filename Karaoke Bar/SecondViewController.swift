@@ -11,6 +11,8 @@ import FirebaseDatabase
 class SecondViewController:  UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
+    //Alfabeto
+    @IBOutlet weak var A: UIButton!
     
     
     @IBOutlet weak var btnVoltar: UIButton!
@@ -18,6 +20,13 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     var table = [Post] ()
     var ref: DatabaseReference!
     var linkMusica:String = ""
+    
+    //VARIAVEL PARA FAZER A ORDENACAO POR LETRA/NUMERO
+    var letraNumero: String = "A"
+    
+    //QUERY DO FIREBASE USADO PARA ORDENAR
+    var query: DatabaseQuery!
+
     @IBOutlet weak var Tableview: UITableView!
     
     override func viewDidLoad() {
@@ -27,10 +36,11 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
         Tableview.estimatedRowHeight = 76
         
         ref = Database.database().reference().child("Musica")
-        
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+
         //Container para compor o TableView
         
-        ref.observe(DataEventType.value, with: {(snapshot) in
+        query.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount > 0 {
                 self.table.removeAll()
                 
@@ -62,7 +72,1056 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     let urlArray = ["http://google.com", "https://apple.com"]
     
     
-    
+    //Alfabeto
+    @IBAction func A(_ sender: Any) {
+        
+        letraNumero = "A"
+        
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func B(_ sender: Any) {
+        
+        letraNumero = "B"
+        
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func C(_ sender: Any) {
+        
+        letraNumero = "C"
+        
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func D(_ sender: Any) {
+        
+        letraNumero = "D"
+        
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func E(_ sender: Any) {
+        
+        letraNumero = "E"
+        
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func F(_ sender: Any) {
+        
+        letraNumero = "F"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func G(_ sender: Any) {
+        
+        letraNumero = "G"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func H(_ sender: Any) {
+        
+        letraNumero = "H"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func I(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func J(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func K(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func L(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func M(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func N(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func O(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func P(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func Q(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func R(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func S(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func T(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func U(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func V(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func W(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func X(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func Y(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func Z(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func zero(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func um(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func dois(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func tres(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func quatro(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func cinco(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func seis(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func sete(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func oito(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
+    @IBAction func nove(_ sender: Any) {
+        
+        letraNumero = "I"
+        ref = Database.database().reference().child("Musica")
+        query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
+        
+        //Container para compor o TableView
+        
+        query.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.table.removeAll()
+                
+                for post in snapshot.children.allObjects as! [DataSnapshot] {
+                    let Object = post.value as? [String: AnyObject]
+                    
+                    let id = Object?["id"]
+                    let cantor = Object?["cantor"]
+                    let nomeMusica = Object?["nomeMusica"]
+                    
+                    let post = Post(id: id as! String , cantor: cantor as! String, nomeMusica: nomeMusica as! String)
+                    
+                    self.table.append(post)
+                    
+                    self.Tableview.reloadData()
+                    
+                }
+            }
+        })
+    }
     func showToast(message : String) {
         
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))

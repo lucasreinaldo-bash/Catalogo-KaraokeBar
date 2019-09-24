@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import Toast_Swift
-class QRCodeViewController: UIViewController {
+class QRCodeViewController: UIViewController,UITextFieldDelegate {
     var  seconds: Int = 60 //This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer = Timer()
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
@@ -165,5 +165,23 @@ class QRCodeViewController: UIViewController {
         gerarQR()
         
         
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+
+        
+        emailField.resignFirstResponder()
+        telefoneField.resignFirstResponder()
+        sobrenomeField.resignFirstResponder()
+        nomeField.resignFirstResponder()
+
+        
+
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
