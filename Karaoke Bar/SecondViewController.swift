@@ -341,7 +341,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func J(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "J"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -370,7 +370,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func K(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "K"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -399,7 +399,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func L(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "L"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -428,7 +428,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func M(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "M"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -457,7 +457,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func N(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "N"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -486,7 +486,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func O(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "O"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -515,7 +515,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func P(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "P"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -544,7 +544,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func Q(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "Q"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -573,7 +573,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func R(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "R"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -602,7 +602,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func S(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "S"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -631,7 +631,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func T(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "T"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -660,7 +660,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func U(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "U"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -689,7 +689,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func V(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "V"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -718,7 +718,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func W(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "W"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -747,7 +747,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func X(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "X"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -776,7 +776,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func Y(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "Y"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -805,7 +805,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func Z(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "Z"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -834,7 +834,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func zero(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "0"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -863,7 +863,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func um(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "1"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -892,7 +892,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func dois(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "2"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -921,7 +921,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func tres(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "3"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -950,7 +950,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func quatro(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "4"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -979,7 +979,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func cinco(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "5"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -1008,7 +1008,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func seis(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "6"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -1037,7 +1037,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func sete(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "7"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -1066,7 +1066,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func oito(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "8"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
@@ -1095,7 +1095,7 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     }
     @IBAction func nove(_ sender: Any) {
         
-        letraNumero = "I"
+        letraNumero = "9"
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)
         
