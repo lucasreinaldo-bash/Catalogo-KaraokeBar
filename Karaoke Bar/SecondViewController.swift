@@ -32,8 +32,8 @@ class SecondViewController:  UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Tableview.rowHeight = UITableView.automaticDimension
-        Tableview.estimatedRowHeight = 76
+        self.Tableview.rowHeight = UITableView.automaticDimension
+        self.Tableview.estimatedRowHeight = 76
         
         ref = Database.database().reference().child("Musica")
         query = ref.queryOrdered(byChild: "cantor").queryStarting(atValue: letraNumero)

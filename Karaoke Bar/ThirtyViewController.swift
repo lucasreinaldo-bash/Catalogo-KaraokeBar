@@ -48,10 +48,10 @@ class ThirtyViewController:  UIViewController,UITextFieldDelegate, UITableViewDa
         super.viewDidLoad()
         
         
+    
         
-        
-        Tableview.rowHeight = UITableView.automaticDimension
-        Tableview.estimatedRowHeight = 76
+        self.Tableview.rowHeight = UITableView.automaticDimension
+        self.Tableview.estimatedRowHeight = 76
         
         
         tableInvisible ()
