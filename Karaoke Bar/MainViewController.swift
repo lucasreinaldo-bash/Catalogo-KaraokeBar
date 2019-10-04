@@ -36,7 +36,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ref = Database.database().reference().child("AllMusic")
         
         //Container para compor o TableView
-        ref.observe(DataEventType.value, with: {(snapshot) in
+         ref.observeSingleEvent(of: .value, with: { (snapshot)  in
             if snapshot.childrenCount > 0 {
                 self.table.removeAll()
                 print(snapshot)

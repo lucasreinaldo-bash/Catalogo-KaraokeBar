@@ -9,38 +9,38 @@
 import UIKit
 import Firebase
 
-class RedesSociaisViewController: UIViewController  {
+class RedesSociais2ViewController: UIViewController  {
     
     
     
     @IBOutlet weak var labelRedes: UILabel!
     @IBOutlet weak var labelSiga: UILabel!
-  
     
     
     
-   
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-      
-      
-       
-       
-
+        
+        
+        
+        
+        
         for family in UIFont.familyNames.sorted() {
             let names = UIFont.fontNames(forFamilyName: family)
             print("Family: \(family) Font names: \(names)")
         }
-       
+        
         //        proximaTela()
         
         // Do any additional setup after loading the view.
     }
     
-
+    
     
     
     func showToast(message : String) {
@@ -61,7 +61,7 @@ class RedesSociaisViewController: UIViewController  {
             toastLabel.removeFromSuperview()
         })
     }
-
+    
     
     @objc func instagram (){
         
@@ -107,7 +107,7 @@ class RedesSociaisViewController: UIViewController  {
         }
         
     }
-   
+    
     
 }
 

@@ -255,6 +255,7 @@ class ThirtyViewController:  UIViewController,UITextFieldDelegate, UITableViewDa
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
+        
         tableVisible()
         if (switchOpcao.isOn){
             labelCantor.isHidden = false
@@ -262,11 +263,13 @@ class ThirtyViewController:  UIViewController,UITextFieldDelegate, UITableViewDa
             filhoQuery = "cantor"
             
             
-     
+            
             var cantor : String = buscarCantor.text!
+            var caracteres = buscarCantor.text?.count
             
             
-         
+            
+            
             
         }
         else{
@@ -275,18 +278,37 @@ class ThirtyViewController:  UIViewController,UITextFieldDelegate, UITableViewDa
             filhoQuery = "nomeMusica"
             
             
+            var cantor : String = buscarCantor.text!
+            var caracteres = buscarCantor.text?.count
             
-         
+            
+            
         }
+        
+        
+        
         
         
         var cantor : String = buscarCantor.text!
         var caracteres = buscarCantor.text?.count
-
-        ref = Database.database().reference().child("AllMusic")
-        query = ref.queryOrdered(byChild: filhoQuery).queryStarting(atValue: cantor)
         
-        query.observe(DataEventType.value, with: {(snapshot) in
+        
+        //Container para compor o TableView
+        
+        
+        if(caracteres == 0 || caracteres == 1){
+            tableInvisible()
+            
+        }
+            
+            
+        else {
+            tableVisible()
+            ref = Database.database().reference().child("AllMusic")
+            query = ref.queryOrdered(byChild: filhoQuery).queryStarting(atValue: cantor)
+            
+           query.observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
             if snapshot.childrenCount > 0 {
                 self.table.removeAll()
                 
@@ -306,26 +328,14 @@ class ThirtyViewController:  UIViewController,UITextFieldDelegate, UITableViewDa
                 }
                 
             }
-        })
-    
-        
-        
-        
-        //Container para compor o TableView
-        
-  
-        if(caracteres == 1 ){
-           tableInvisible ()
-        }
-        if(caracteres == 0 ){
-            tableInvisible ()
-        }
-        else {
-            tableVisible()
-            
+                // ...
+            }) { (error) in
+                print(error.localizedDescription)
+            }
         }
         //            buscarCantor
         print(buscarCantor.text!)
+    
         
         
         
@@ -351,6 +361,7 @@ class ThirtyViewController:  UIViewController,UITextFieldDelegate, UITableViewDa
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true
+    return true
     }
+
 }

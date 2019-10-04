@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //Container para compor o TableView
         
-        query.observe(DataEventType.value, with: {(snapshot) in
+         query.observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.childrenCount > 0 {
                 self.table.removeAll()
                 
